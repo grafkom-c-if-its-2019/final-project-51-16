@@ -277,7 +277,7 @@ function createMazeCubes() {
     // wall details
     var cubeGeo = new THREE.BoxGeometry(UNITWIDTH, UNITHEIGHT, UNITWIDTH);
     var loader = new THREE.TextureLoader();
-    var texture1 = loader.load("wall.png");
+    var texture1 = loader.load("yugi.jpg");
 
     var cubeMat = new THREE.MeshPhongMaterial({color:0xffffff, map:texture1});
 
