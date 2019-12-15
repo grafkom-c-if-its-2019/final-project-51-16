@@ -1,11 +1,11 @@
 var UNITWIDTH = 90;                 // Width of a cubes in the maze
-var UNITHEIGHT = 45;                // Height of the cubes in the maze
+var UNITHEIGHT = 90;                // Height of the cubes in the maze
 var CATCHOFFSET = 30;               // Distance from the player the dino to trigger game over
 var DINOCOLLISIONDISTANCE = 55;     // How many units away a dino can get to a wall
 var PLAYERCOLLISIONDISTANCE = 20;   // How many units away the player can get from the wall
-var PLAYERSPEED = 800.0;            // How fast the player moves
-var DINOSPEED = 400.0;              // How fast the dino moves
-var DINOSCALE = 10;                 // How big our dino is scaled to
+var PLAYERSPEED = 1500.0;            // How fast the player moves
+var DINOSPEED = 600.0;              // How fast the dino moves
+var DINOSCALE = 20;                 // How big our dino is scaled to
 
 
 var clock;
