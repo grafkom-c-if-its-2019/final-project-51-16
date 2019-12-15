@@ -418,8 +418,24 @@ function triggerChase() {
         // Game over when dino is the value of CATCHOFFSET units away from camera
         var distanceFrom = Math.round(dino.position.distanceTo(controls.getObject().position)) - CATCHOFFSET;
         // Alert and display distance between camera and dino
-        dinoAlert.innerHTML = "Musuh semakin mendekat! Jarak denganmu adalah: " + distanceFrom;
-        dinoAlert.style.display = '';
+        if(distanceFrom<270 && distanceFrom>170){
+            document.getElementById("dino-alert").style.fontSize = "50px";
+            document.getElementById("dino-alert").style.color = "green";
+            dinoAlert.innerHTML = "Waspada Musuh";
+            dinoAlert.style.display = '';
+        }
+        if(distanceFrom<170 && distanceFrom>70){
+            document.getElementById("dino-alert").style.fontSize = "150px";
+            document.getElementById("dino-alert").style.color = "orange";
+            dinoAlert.innerHTML = "Musuh semakin mendekat!";
+            dinoAlert.style.display = '';
+        }
+        if(distanceFrom<70 && distanceFrom>0){
+            document.getElementById("dino-alert").style.fontSize = "200px";
+            document.getElementById("dino-alert").style.color = "red";
+            dinoAlert.innerHTML = "WAAAAAAAAAAAAHH";
+            dinoAlert.style.display = '';
+        }
         return true;
         // Not in agro range, don't start distance countdown
     } else {
