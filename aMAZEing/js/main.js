@@ -277,7 +277,7 @@ function createMazeCubes() {
     // wall details
     var cubeGeo = new THREE.BoxGeometry(UNITWIDTH, UNITHEIGHT, UNITWIDTH);
     var loader = new THREE.TextureLoader();
-    var texture1 = loader.load("stone.jpg");
+    var texture1 = loader.load("wall.png");
 
     var cubeMat = new THREE.MeshPhongMaterial({color:0xffffff, map:texture1});
 
@@ -317,7 +317,7 @@ function createGround() {
     // Create the ground geometry and material
     var groundGeo = new THREE.PlaneGeometry(mapSize, mapSize);
     var loader = new THREE.TextureLoader();
-    var texture1 = loader.load("lantai.png");
+    var texture1 = loader.load("lantairumput.jpg");
     var groundMat = new THREE.MeshPhongMaterial({color:0xffffff, map:texture1, side: THREE.DoubleSide, shading: THREE.FlatShading});
 
     // Create the ground and rotate it flat
