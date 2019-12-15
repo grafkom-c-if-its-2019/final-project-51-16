@@ -268,9 +268,10 @@ function createMazeCubes() {
 
     // wall details
     var cubeGeo = new THREE.BoxGeometry(UNITWIDTH, UNITHEIGHT, UNITWIDTH);
-    var cubeMat = new THREE.MeshPhongMaterial({
-        color: 0x81cfe0,
-    });
+    var loader = new THREE.TextureLoader();
+    var texture1 = loader.load("stone.jpg");
+
+    var cubeMat = new THREE.MeshPhongMaterial({color:0xffffff, map:texture1});
 
     // Keep cubes within boundry walls
     var widthOffset = UNITWIDTH / 2;
