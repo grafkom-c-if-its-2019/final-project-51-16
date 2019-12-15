@@ -422,7 +422,7 @@ function triggerChase() {
 // Dino has caught the player. Turn on end prompt.
 function caught() {
     blocker.style.display = '';
-    instructions.innerHTML = "GAME OVER </br></br></br> Press ESC to restart";
+    instructions.innerHTML = "Yah Kalah </br></br></br> Tekan ESC to mulai lagi.";
     gameOver = true;
     instructions.style.display = '';
     dinoAlert.style.display = 'none';
@@ -430,7 +430,7 @@ function caught() {
 
 function finished() {
     blocker.style.display = '';
-    instructions.innerHTML = "MENANG </br></br></br> Press ESC to restart";
+    instructions.innerHTML = "Ye Menang! </br></br></br> Tekan ESC to mulai lagi.";
     gameOver = true;
     instructions.style.display = '';
     dinoAlert.style.display = 'none';
