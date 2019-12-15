@@ -420,7 +420,7 @@ function triggerChase() {
         // Alert and display distance between camera and dino
         if(distanceFrom<270 && distanceFrom>170){
             document.getElementById("dino-alert").style.fontSize = "50px";
-            document.getElementById("dino-alert").style.color = "green";
+            document.getElementById("dino-alert").style.color = "white";
             dinoAlert.innerHTML = "Waspada Musuh";
             dinoAlert.style.display = '';
         }
@@ -447,7 +447,7 @@ function triggerChase() {
 // Dino has caught the player. Turn on end prompt.
 function caught() {
     blocker.style.display = '';
-    instructions.innerHTML = "<strong>Yah Kalah</strong></br></br>Tekan ESC untuk mulai lagi.";
+    instructions.innerHTML = "<strong>Yah Kalah :(</strong></br></br>Tekan ESC untuk mulai lagi.";
     gameOver = true;
     instructions.style.display = '';
     dinoAlert.style.display = 'none';
@@ -455,7 +455,7 @@ function caught() {
 
 function finished() {
     blocker.style.display = '';
-    instructions.innerHTML = "<strong>Ye Menang!</strong></br></br>Tekan ESC untuk mulai lagi.";
+    instructions.innerHTML = "<strong>Yee Menang!</strong></br></br>Tekan ESC untuk mulai lagi.";
     gameOver = true;
     instructions.style.display = '';
     dinoAlert.style.display = 'none';
