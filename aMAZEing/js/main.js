@@ -316,7 +316,10 @@ function createMazeCubes() {
 function createGround() {
     // Create the ground geometry and material
     var groundGeo = new THREE.PlaneGeometry(mapSize, mapSize);
-    var groundMat = new THREE.MeshPhongMaterial({ color: 0xA0522D, side: THREE.DoubleSide, shading: THREE.FlatShading });
+    var loader = new THREE.TextureLoader();
+    var texture1 = loader.load("lantai.png");
+
+    var groundMat = new THREE.MeshPhongMaterial({color:0xffffff, map:texture1, side: THREE.DoubleSide, shading: THREE.FlatShading});
 
     // Create the ground and rotate it flat
     var ground = new THREE.Mesh(groundGeo, groundMat);
