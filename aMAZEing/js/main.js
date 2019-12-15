@@ -5,7 +5,7 @@ var DINOCOLLISIONDISTANCE = 55;     // How many units away a dino can get to a w
 var PLAYERCOLLISIONDISTANCE = 20;   // How many units away the player can get from the wall
 var PLAYERSPEED = 800.0;            // How fast the player moves
 var DINOSPEED = 400.0;              // How fast the dino moves
-var DINOSCALE = 20;                 // How big our dino is scaled to
+var DINOSCALE = 10;                 // How big our dino is scaled to
 
 
 var clock;
@@ -134,10 +134,10 @@ function init() {
         dinoObject.name = "dino";
         scene.add(dinoObject);
 
-        var finishGeometry = new THREE.SphereGeometry( 50, 32, 32 );
+        var finishGeometry = new THREE.SphereGeometry( 20, 32, 32 );
         var finishMaterial = new THREE.MeshBasicMaterial( {color: 0xffff00} );
         var finishObject = new THREE.Mesh( finishGeometry, finishMaterial );
-        finishObject.position.set(30, 0, -400);
+        finishObject.position.set(30, 20, -400);
         finishObject.name = "finish";
         scene.add(finishObject);
 
@@ -385,7 +385,7 @@ function animate() {
     if (dino.position.distanceTo(controls.getObject().position) < CATCHOFFSET) {
         caught();
     }
-    else if (finish.position.distanceTo(controls.getObject().position) < 50) {
+    else if (finish.position.distanceTo(controls.getObject().position) < 25) {
         finished();
     // Player is at an undetected distance
     // Keep the dino moving and let the player keep moving too
