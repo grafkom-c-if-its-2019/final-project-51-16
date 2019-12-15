@@ -147,7 +147,7 @@ function init() {
         finish = scene.getObjectByName("finish");
 
         // Model is loaded, switch from "Loading..." to instruction text
-        instructions.innerHTML = "<strong>Click to Play!</strong> </br></br> W,A,S,D or arrow keys = move </br>Mouse = look around";
+        instructions.innerHTML = "<strong>Tekan mouse untuk mulai!</strong> </br></br> W,A,S,D atau arrow keys untuk berpindah posisi, </br>geser mouse untuk menggeser view kamera.";
 
         // Call the animate function so that animation begins after the model is loaded
         animate();
@@ -409,7 +409,7 @@ function triggerChase() {
         // Game over when dino is the value of CATCHOFFSET units away from camera
         var distanceFrom = Math.round(dino.position.distanceTo(controls.getObject().position)) - CATCHOFFSET;
         // Alert and display distance between camera and dino
-        dinoAlert.innerHTML = "Dino has spotted you! Distance from you: " + distanceFrom;
+        dinoAlert.innerHTML = "Musuh semakin mendekat! Jarak denganmu adalah: " + distanceFrom;
         dinoAlert.style.display = '';
         return true;
         // Not in agro range, don't start distance countdown
@@ -422,7 +422,7 @@ function triggerChase() {
 // Dino has caught the player. Turn on end prompt.
 function caught() {
     blocker.style.display = '';
-    instructions.innerHTML = "Yah Kalah </br></br></br> Tekan ESC to mulai lagi.";
+    instructions.innerHTML = "Yah Kalah </br></br></br> Tekan ESC untuk mulai lagi.";
     gameOver = true;
     instructions.style.display = '';
     dinoAlert.style.display = 'none';
@@ -430,7 +430,7 @@ function caught() {
 
 function finished() {
     blocker.style.display = '';
-    instructions.innerHTML = "Ye Menang! </br></br></br> Tekan ESC to mulai lagi.";
+    instructions.innerHTML = "Ye Menang! </br></br></br> Tekan ESC untuk mulai lagi.";
     gameOver = true;
     instructions.style.display = '';
     dinoAlert.style.display = 'none';
