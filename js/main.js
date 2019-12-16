@@ -147,7 +147,7 @@ function init() {
         finish = scene.getObjectByName("finish");
 
         // Model is loaded, switch from "Loading..." to instruction text
-        instructions.innerHTML = "<strong>aMAZEing</strong></br></br>Tekan mouse untuk mulai!</br><small>W,A,S,D atau arrow keys untuk berpindah posisi, </br>geser mouse untuk menggeser view kamera.</small>";
+        instructions.innerHTML = "Tekan mouse untuk mulai!";
 
         // Call the animate function so that animation begins after the model is loaded
         animate();
