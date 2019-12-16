@@ -1,11 +1,11 @@
 var UNITWIDTH = 90;                 // Width of a cubes in the maze
 var UNITHEIGHT = 90;                // Height of the cubes in the maze
-var CATCHOFFSET = 30;               // Distance from the player the dino to trigger game over
-var DINOCOLLISIONDISTANCE = 55;     // How many units away a dino can get to a wall
+var CATCHOFFSET = 20;               // Distance from the player the dino to trigger game over
+var DINOCOLLISIONDISTANCE = 30;     // How many units away a dino can get to a wall
 var PLAYERCOLLISIONDISTANCE = 20;   // How many units away the player can get from the wall
 var PLAYERSPEED = 1500.0;            // How fast the player moves
 var DINOSPEED = 600.0;              // How fast the dino moves
-var DINOSCALE = 20;                 // How big our dino is scaled to
+var DINOSCALE = 15;                 // How big our dino is scaled to
 
 
 var clock;
@@ -135,7 +135,7 @@ function init() {
         scene.add(dinoObject);
 
         var finishGeometry = new THREE.SphereGeometry( 20, 32, 32 );
-        var finishMaterial = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+        var finishMaterial = new THREE.MeshPhongMaterial( {color: 0xffff00} );
         var finishObject = new THREE.Mesh( finishGeometry, finishMaterial );
         finishObject.position.set(850, 20, -850);
         finishObject.name = "finish";
@@ -279,7 +279,7 @@ function createMazeCubes() {
     // wall details
     var cubeGeo = new THREE.BoxGeometry(UNITWIDTH, UNITHEIGHT, UNITWIDTH);
     var loader = new THREE.TextureLoader();
-    var texture1 = loader.load("./wall.png");
+    var texture1 = loader.load("stone.jpg");
 
     var cubeMat = new THREE.MeshPhongMaterial({color:0xffffff, map:texture1});
 
@@ -320,7 +320,7 @@ function createGround() {
     var groundGeo = new THREE.PlaneGeometry(mapSize, mapSize);
     var loader = new THREE.TextureLoader();
     var texture1 = loader.load("lantairumput.jpg");
-    var groundMat = new THREE.MeshPhongMaterial({color:0xffffff, map:texture1, side: THREE.DoubleSide, shading: THREE.FlatShading});
+    var groundMat = new THREE.MeshPhongMaterial({color:0xa8a3a3, side: THREE.DoubleSide, shading: THREE.FlatShading});
 
     // Create the ground and rotate it flat
     var ground = new THREE.Mesh(groundGeo, groundMat);
