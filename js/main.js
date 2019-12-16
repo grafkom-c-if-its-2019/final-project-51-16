@@ -87,7 +87,7 @@ function init() {
     scene = new THREE.Scene();
 
     // Add some fog for effects
-    scene.fog = new THREE.FogExp2(0x000000, 0.0015);
+    scene.fog = new THREE.FogExp2(0x000000, 0.0035);
 
     // Set render settings
     renderer = new THREE.WebGLRenderer();
@@ -279,7 +279,7 @@ function createMazeCubes() {
     // wall details
     var cubeGeo = new THREE.BoxGeometry(UNITWIDTH, UNITHEIGHT, UNITWIDTH);
     var loader = new THREE.TextureLoader();
-    var texture1 = loader.load("stone.jpg");
+    var texture1 = loader.load("batu.jpg");
 
     var cubeMat = new THREE.MeshPhongMaterial({color:0xffffff, map:texture1});
 
@@ -319,8 +319,8 @@ function createGround() {
     // Create the ground geometry and material
     var groundGeo = new THREE.PlaneGeometry(mapSize, mapSize);
     var loader = new THREE.TextureLoader();
-    var texture1 = loader.load("lantairumput.jpg");
-    var groundMat = new THREE.MeshPhongMaterial({color:0xa8a3a3, side: THREE.DoubleSide, shading: THREE.FlatShading});
+    var texture1 = loader.load("batu1.jpg");
+    var groundMat = new THREE.MeshPhongMaterial({color:0xa8a3a3, map:texture1,side: THREE.DoubleSide, shading: THREE.FlatShading});
 
     // Create the ground and rotate it flat
     var ground = new THREE.Mesh(groundGeo, groundMat);
