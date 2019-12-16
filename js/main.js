@@ -405,7 +405,6 @@ function render() {
 
 }
 
-
 // Make the dino chase the player
 function triggerChase() {
     // Check if in dino agro range
