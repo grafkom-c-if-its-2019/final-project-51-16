@@ -9,7 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body class="bg-dark text-white">
   
 <div class="container">
     <br>
@@ -18,7 +18,45 @@
     <img src="logo.png" class="img-fluid">
     <center><h2>by 51-16</h2></center>
     <br>
-    <center><a href="main.html" class="btn btn-dark btn-lg">Yuk</a></center>
+    <center><a href="main.html" class="btn btn-warning btn-lg">Yuk</a></center><br>
+    <center><button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#myModal">
+      Cara Bermain
+    </button></center>
+
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Cara Bermain</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>
+                Klik mouse untuk mulai
+              </li>
+              <li>
+                W,A,S,D atau arrow keys untuk berpindah posisi
+              </li>
+              <li>
+                Geser mouse untuk menggeser view kamera
+              </li>
+              <li>
+                Cari jalan keluar dengan menemukan objek berbentuk bola
+              </li>
+              <li>
+                <strong>Waspada terhadap musuh!</strong>
+              </li>
+            </ul>
+            </br>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Paham</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
 
 </body>
 </html>
